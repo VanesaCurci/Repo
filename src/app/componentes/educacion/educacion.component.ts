@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Educación } from 'src/app/interfaces/educación';
-import { EducaciónService } from 'src/app/servicios/educación.service';
+import { Educacion } from 'src/app/interfaces/educacion';
+import { EducacionService } from 'src/app/servicios/educacion.service';
 
 @Component({
   selector: 'app-educacion',
@@ -8,9 +8,9 @@ import { EducaciónService } from 'src/app/servicios/educación.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  educaciones:Educación[]=[]
+  educaciones:Educacion[]=[]
 
-  constructor(private service:EducaciónService) { }
+  constructor(private service:EducacionService) { }
 
   ngOnInit(): void {
     this.getEducaciones()
@@ -21,8 +21,8 @@ export class EducacionComponent implements OnInit {
     .subscribe(educaciones => this.educaciones = educaciones);
   }
 
-  delete(educacion:Educación): void {
+  delete(educacion:Educacion): void {
     this.educaciones = this.educaciones.filter(t => t !== educacion);
-    this.service.deleteEducación(educacion.id).subscribe();
+    this.service.deleteEducacion(educacion.id).subscribe();
   }
 }

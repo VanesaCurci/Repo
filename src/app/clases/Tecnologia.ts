@@ -1,4 +1,4 @@
-export class Tecnología {
+export class TecnologiaClass {
 
     constructor(
       public id: number,

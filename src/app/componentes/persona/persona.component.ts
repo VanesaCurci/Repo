@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonaServiceService } from 'src/app/servicios/persona-service.service';
+import { PersonaService } from 'src/app/servicios/persona.service';
 import { Persona } from 'src/app/interfaces/persona';
 import {Localidad} from 'src/app/interfaces/localidad'
 import { LocalidadService } from 'src/app/servicios/localidad.service';
@@ -17,7 +17,7 @@ export class PersonaComponent implements OnInit {
   provincias: Provincia[]=[]
 
   constructor(
-    private personaService: PersonaServiceService,
+    private personaService: PersonaService,
     private localidadService:LocalidadService,
     private provinciaService: ProvinciaService
     ) { }

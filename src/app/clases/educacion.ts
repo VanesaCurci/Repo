@@ -1,4 +1,4 @@
-export class EducaciónClass {
+export class EducacionClass {
 
     constructor(
       public id: number,

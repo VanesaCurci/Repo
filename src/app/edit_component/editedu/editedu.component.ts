@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Educación } from 'src/app/interfaces/educación';
-import { EducaciónService } from 'src/app/servicios/educación.service';
+import { Educacion } from 'src/app/interfaces/educacion';
+import { EducacionService } from 'src/app/servicios/educacion.service';
 import { Location } from '@angular/common';
 
 @Component({
@@ -10,21 +10,21 @@ import { Location } from '@angular/common';
   styleUrls: ['./editedu.component.css']
 })
 export class EditeduComponent implements OnInit {
-  educacion:Educación | undefined
+  educacion:Educacion | undefined
 
   constructor(
     private route: ActivatedRoute,
-    private service:EducaciónService,
+    private service:EducacionService,
     private location: Location
   ) { }
 
   ngOnInit(): void {
-    this.getEducación();
+    this.getEducacion();
   }
 
-  getEducación(): void {
+  getEducacion(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
-    this.service.getEducación(id)
+    this.service.getEducacion(id)
       .subscribe(educacion => this.educacion = educacion);
   }
 
@@ -34,7 +34,7 @@ export class EditeduComponent implements OnInit {
 
   save(): void {
     if (this.educacion) {
-      this.service.updateEducación(this.educacion)
+      this.service.updateEducacion(this.educacion)
         .subscribe(() => this.goBack());
     }
   }

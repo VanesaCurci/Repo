@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Tecnologia } from 'src/app/interfaces/tecnologia';
-import { TecnologiaServiceService } from 'src/app/servicios/tecnologia-service.service';
+import { TecnologiaService } from 'src/app/servicios/tecnologia.service';
 
 @Component({
   selector: 'app-tecnologia',
@@ -11,7 +11,7 @@ export class TecnologiaComponent implements OnInit {
   tecnologias: Tecnologia[] = [];
   
   constructor(
-    private tecnologiaService:TecnologiaServiceService,
+    private tecnologiaService:TecnologiaService,
     ) { }
 
   ngOnInit(): void {

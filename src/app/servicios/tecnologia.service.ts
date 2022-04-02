@@ -7,12 +7,12 @@ import { Tecnologia } from '../interfaces/tecnologia';
 @Injectable({
   providedIn: 'root'
 })
-export class TecnologiaServiceService {
+export class TecnologiaService {
   
 
   constructor(private http: HttpClient,) { }
 
-  private tecnologiaUrl = 'http://localhost:8080/tecnologías'
+  private tecnologiaUrl = 'http://localhost:8080/tecnologias'
 
   getTecnologias(): Observable<Tecnologia[]> {
     return this.http.get<Tecnologia[]>(this.tecnologiaUrl)   

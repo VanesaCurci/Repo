@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Persona } from 'src/app/interfaces/persona';
-import { PersonaServiceService } from 'src/app/servicios/persona-service.service';
+import { PersonaService } from 'src/app/servicios/persona.service';
 
 @Component({
   selector: 'app-inicio',
@@ -10,7 +10,7 @@ import { PersonaServiceService } from 'src/app/servicios/persona-service.service
 export class InicioComponent implements OnInit {
   personas:Persona[]=[]
   
-  constructor(private personaService:PersonaServiceService) { }
+  constructor(private personaService:PersonaService) { }
 
   ngOnInit(): void {
     this.getPersonas()

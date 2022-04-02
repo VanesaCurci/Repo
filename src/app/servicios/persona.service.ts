@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class PersonaServiceService {
+export class PersonaService {
 
   constructor(private http:HttpClient) { }
   private personaUrl = 'http://localhost:8080/personas';

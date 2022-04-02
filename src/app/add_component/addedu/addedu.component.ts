@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { EducaciónClass } from 'src/app/clases/educación';
-import { Educación } from 'src/app/interfaces/educación';
-import { EducaciónService } from 'src/app/servicios/educación.service';
+import { EducacionClass } from 'src/app/clases/educacion';
+import { Educacion } from 'src/app/interfaces/educacion';
+import { EducacionService } from 'src/app/servicios/educacion.service';
 
 @Component({
   selector: 'app-addedu',
@@ -10,20 +10,20 @@ import { EducaciónService } from 'src/app/servicios/educación.service';
   styleUrls: ['./addedu.component.css']
 })
 export class AddeduComponent implements OnInit {
-  educaciones:Educación[]=[]
+  educaciones:Educacion[]=[]
 
   constructor(
-    private service:EducaciónService,
+    private service:EducacionService,
     private router:Router
   ) { }
 
   ngOnInit(): void {
   }
 
-  model = new EducaciónClass(0,'', '','');
+  model = new EducacionClass(0,'', '','');
 
   onSubmit(values: any): void { 
-    this.service.addEducación(values).subscribe((educacion)=> (
+    this.service.addEducacion(values).subscribe((educacion)=> (
       this.educaciones.push(educacion) 
     ))
     this.router.navigate(['informacion'])

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Tecnologia } from 'src/app/interfaces/tecnologia';
-import { TecnologiaServiceService } from 'src/app/servicios/tecnologia-service.service';
+import { TecnologiaService } from 'src/app/servicios/tecnologia.service';
 import { Location } from '@angular/common';
 
 @Component({
@@ -14,7 +14,7 @@ export class EdittecnoComponent implements OnInit {
   
   constructor(
     private route: ActivatedRoute,
-    private tecnologiaService: TecnologiaServiceService,
+    private tecnologiaService: TecnologiaService,
     private location: Location
   ) { }
 

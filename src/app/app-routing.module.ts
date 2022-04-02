@@ -4,6 +4,7 @@ import { AddeduComponent } from './add_component/addedu/addedu.component';
 import { AddidioComponent } from './add_component/addidio/addidio.component';
 import { AddproyeComponent } from './add_component/addproye/addproye.component';
 import { AddtecnoComponent } from './add_component/addtecno/addtecno.component';
+import { AppComponent } from './app.component';
 import { EditeduComponent } from './edit_component/editedu/editedu.component';
 import { EditidioComponent } from './edit_component/editidio/editidio.component';
 import { EditproyeComponent } from './edit_component/editproye/editproye.component';
