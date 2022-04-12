@@ -21,8 +21,8 @@ ngOnInit(): void {
 }
 
   imagenes = ['Angular.jpg', 'CSS.jpg','delfín.jpg','front-end.jpg','Github.jpg',
-            'go.jpg', 'HTML.jpg','JavaScript.jpg','MySQL.jpg', 'phython.jpg',
-             'postman.jpg', 'spring-jpg', 'SpringBoot.jpg'];
+            'go.jpg', 'HTML.jpg','JavaScript.jpg','MySQL.jpg', 'python.jpg',
+             'postman.jpg', 'spring-jpg', 'SpringBoot.jpg', 'Java.jpg'];
 
   model = new TecnologiaClass(0,'', '');
 
