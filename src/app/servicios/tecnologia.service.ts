@@ -12,7 +12,7 @@ export class TecnologiaService {
 
   constructor(private http: HttpClient,) { }
 
-  private tecnologiaUrl = 'http://localhost:8080/tecnologias'
+  private tecnologiaUrl = 'http://faraones.herokuapp.com/tecnologias'
 
   getTecnologias(): Observable<Tecnologia[]> {
     return this.http.get<Tecnologia[]>(this.tecnologiaUrl)   

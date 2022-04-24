@@ -10,7 +10,7 @@ export class ProyectoService {
 
   constructor(private http: HttpClient,) { }
 
-  private proyectoUrl = 'http://localhost:8080/proyectos'
+  private proyectoUrl = 'http://faraones.herokuapp.com/proyectos'
 
   getProyectos(): Observable<Proyecto[]> {
     return this.http.get<Proyecto[]>(this.proyectoUrl)   
