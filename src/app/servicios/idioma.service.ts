@@ -10,7 +10,7 @@ export class IdiomaService {
 
   constructor(private http: HttpClient,) { }
 
-  private idiomaUrl = 'http://faraones.herokuapp.com/idiomas'
+  private idiomaUrl = 'https://faraones.herokuapp.com/idiomas'
 
   getIdiomas(): Observable<Idioma[]> {
     return this.http.get<Idioma[]>(this.idiomaUrl)   

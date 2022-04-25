@@ -9,7 +9,7 @@ import { Provincia } from '../interfaces/provincia';
 export class ProvinciaService {
 
   constructor(private http:HttpClient) { }
-  private provinciaUrl = 'http://faraones.herokuapp.com/provincias';
+  private provinciaUrl = 'https://faraones.herokuapp.com/provincias';
 
   getProvincias(): Observable<Provincia[]> {
     return this.http.get<Provincia[]>(this.provinciaUrl)   

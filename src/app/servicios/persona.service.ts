@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class PersonaService {
 
   constructor(private http:HttpClient) { }
-  private personaUrl = 'http://faraones.herokuapp.com/personas';
+  private personaUrl = 'https://faraones.herokuapp.com/personas';
 
   getPersonas(): Observable<Persona[]> {
     return this.http.get<Persona[]>(this.personaUrl)   

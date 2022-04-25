@@ -9,7 +9,7 @@ import { Localidad } from '../interfaces/localidad';
 export class LocalidadService {
 
   constructor(private http:HttpClient) { }
-  private localidadUrl = 'http://faraones.herokuapp.com/localidades';
+  private localidadUrl = 'https://faraones.herokuapp.com/localidades';
 
   getLocalidades(): Observable<Localidad[]> {
     return this.http.get<Localidad[]>(this.localidadUrl)   

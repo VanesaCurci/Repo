@@ -10,7 +10,7 @@ export class EducacionService {
 
   constructor(private http: HttpClient,) { }
 
-  private educacionUrl = 'http://faraones.herokuapp.com/educacion'
+  private educacionUrl = 'https://faraones.herokuapp.com/educacion'
 
   getEducaciones(): Observable<Educacion[]> {
     return this.http.get<Educacion[]>(this.educacionUrl)   

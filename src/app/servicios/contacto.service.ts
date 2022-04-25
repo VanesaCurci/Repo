@@ -9,7 +9,7 @@ import { Contacto } from '../interfaces/contacto';
 export class ContactoService {
 
   constructor(private http: HttpClient,) { }
-  private contactoUrl = 'http://faraones.herokuapp.com/contactos'
+  private contactoUrl = 'https://faraones.herokuapp.com/contactos'
 
   getContactos(): Observable<Contacto[]> {
     return this.http.get<Contacto[]>(this.contactoUrl)   
