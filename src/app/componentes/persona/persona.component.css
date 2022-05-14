@@ -1,27 +1,24 @@
-.card {
-    margin: 15px;
-    border-radius: 40px; 
-    background-color: #D6EAF8 ;
-    
+.card-img-overlay {
+    padding-top: 200px;
+    padding-bottom:200px;
+    width:200px;
+    height:200px
 }
 
-.card-img-overlay {
-    padding-top: 220px;
-}
 .card-body {
-    margin-top: 10px;
+    margin-top: 2px;
+
 }
 
 .card-img-top{
     width:auto ;
     height:300px ;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 h1{
-    padding-top:40px;
-    
+    padding-top:30px;
 }
 
 

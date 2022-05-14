@@ -1,7 +1,9 @@
-ul {
-    align-items: left;
+ul li{
+    align-items: right;
 }
 
 .navbar-text {
     font-family: cursive;
 }
+
+

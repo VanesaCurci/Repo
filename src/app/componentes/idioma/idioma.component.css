@@ -1,19 +1,8 @@
-.card {
-    margin: 15px;
-    border-radius: 40px; 
-    background-color: #D6EAF8 ;
-}
-
 
 .fa:hover {
     opacity: 0.6;
 }
 
-i {
-    float:right;
-    margin: 5px 20px 20px 40px;
-    font-size: 25px; 
-}
 
 .progress{
     margin-left: 20px;
