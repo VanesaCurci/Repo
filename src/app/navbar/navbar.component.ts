@@ -1,16 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { TokenService } from '../usuario/service/token.service';
+
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  isLogged = false
+  constructor(
+    private router:Router,
+    private tokenService:TokenService
+    ) { }
 
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
+  ngOnInit(){
+    if(this.tokenService.getToken()){
+      this.isLogged = true
+    }else{
+      this.isLogged = false
+    }
+  }
+  onLogOuT():void{
+    this.tokenService.logOut();
+    this.router.navigate(['/login']);
+    
   }
 
   

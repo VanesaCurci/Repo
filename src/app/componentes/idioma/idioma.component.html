@@ -2,7 +2,7 @@
   <div class="card">
     <h1 class="card-title">Idiomas</h1>
       <a routerLink="/addidi">
-        <i class="fa fa-plus"></i>
+        <i class="fa fa-plus" *ngIf="isAdmin"></i>
       </a>
         <div *ngFor="let idioma of idiomas">
         <div class="progress" >
@@ -14,9 +14,9 @@
         </div>
         <div>
         <a routerLink="/editidi/{{idioma.id}}">
-          <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>  
+          <i class="fa fa-pencil fa-lg" aria-hidden="true" *ngIf="isAdmin"></i>  
         </a>
-         <i class="fa fa-trash-o" aria-hidden="true" (click)="delete(idioma)"></i>
+         <i class="fa fa-trash-o" aria-hidden="true" *ngIf="isAdmin" (click)="delete(idioma)"></i>
         </div>
       </div>
   </div>

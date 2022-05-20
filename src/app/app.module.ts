@@ -22,6 +22,10 @@ import { InicioComponent } from './vistas/inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { InformacionComponent } from './vistas/informacion/informacion.component';
 import { ContactoComponent } from './vistas/contacto/contacto.component';
+import { LoginComponent } from './usuario/auth/login/login.component';
+import { RegistroComponent } from './usuario/auth/registro/registro.component';
+
+import { interceptorProvider } from './usuario/service/interceptors.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,10 @@ import { ContactoComponent } from './vistas/contacto/contacto.component';
     InicioComponent,
     NavbarComponent,
     InformacionComponent,
-    ContactoComponent
+    ContactoComponent,
+    LoginComponent,
+    RegistroComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -50,7 +57,7 @@ import { ContactoComponent } from './vistas/contacto/contacto.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

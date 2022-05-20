@@ -2,14 +2,14 @@
     <div class="card">
       <h1>Educación</h1>
         <a routerLink="/addedu">
-        <i class="fa fa-plus"></i>
+        <i class="fa fa-plus" *ngIf="isAdmin"></i>
         </a>
         <div class="card-title" *ngFor="let educacion of educaciones">
           <h2>{{educacion.titulo}}</h2>
           <a routerLink="/editedu/{{educacion.id}}">
-            <i class="fa fa-pencil" aria-hidden="true"></i> 
+            <i class="fa fa-pencil" aria-hidden="true" *ngIf="isAdmin"></i> 
           </a>
-          <i class="fa fa-trash-o" aria-hidden="true" (click)="delete(educacion)"></i>
+          <i class="fa fa-trash-o" aria-hidden="true" *ngIf="isAdmin" (click)="delete(educacion)"></i>
           <h3>{{educacion.lugar}}</h3>
           <h3>{{educacion.duracion}}</h3>
         </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tecnologia } from 'src/app/interfaces/tecnologia';
 import { TecnologiaService } from 'src/app/servicios/tecnologia.service';
+import { TokenService } from 'src/app/usuario/service/token.service';
 
 @Component({
   selector: 'app-tecnologia',
@@ -9,13 +10,22 @@ import { TecnologiaService } from 'src/app/servicios/tecnologia.service';
 })
 export class TecnologiaComponent implements OnInit {
   tecnologias: Tecnologia[] = [];
+  roles:string[]=[];
+  isAdmin = false
   
   constructor(
     private tecnologiaService:TecnologiaService,
+    private tokenService:TokenService
     ) { }
 
   ngOnInit(): void {
     this.getTecnologias();
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach(rol =>{
+      if(rol === 'ROLE_ADMIN'){
+        this.isAdmin=true
+      }
+    })
   }
 
   getTecnologias(): void {

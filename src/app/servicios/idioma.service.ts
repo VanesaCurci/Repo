@@ -21,7 +21,7 @@ export class IdiomaService {
   }
 
   deleteIdioma(id:number): Observable<Idioma> {
-    const url = `${this.idiomaUrl}/${id}`
+    const url = `${this.idiomaUrl}/borrar/${id}`
     return this.http.delete<Idioma>(url);
   }
 

@@ -9,21 +9,26 @@ import { EditeduComponent } from './edit_component/editedu/editedu.component';
 import { EditidioComponent } from './edit_component/editidio/editidio.component';
 import { EditproyeComponent } from './edit_component/editproye/editproye.component';
 import { EdittecnoComponent } from './edit_component/edittecno/edittecno.component';
+import { LoginComponent } from './usuario/auth/login/login.component';
+import { RegistroComponent } from './usuario/auth/registro/registro.component';
 import { ContactoComponent } from './vistas/contacto/contacto.component';
 import { InformacionComponent } from './vistas/informacion/informacion.component';
 import { InicioComponent } from './vistas/inicio/inicio.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/inicio', pathMatch: 'full' },
+  
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  {path:'login', component:LoginComponent},
+  {path:'registro', component:RegistroComponent},
   {path:'inicio', component: InicioComponent},
   {path:'informacion', component: InformacionComponent},
   {path:'contacto', component: ContactoComponent},
   {path:'addtecno', component: AddtecnoComponent},
   {path:'addedu',component:AddeduComponent},
   {path:'addidi', component:AddidioComponent},
-  {path:'addproye',component:AddproyeComponent},
-  {path:'edittecno/:id', component: EdittecnoComponent },
+  {path:'addproye',component:AddproyeComponent },
+  {path:'edittecno/:id', component: EdittecnoComponent},
   {path:'editedu/:id',component:EditeduComponent},
   {path:'editidi/:id',component:EditidioComponent},
   {path:'editproye/:id', component:EditproyeComponent}

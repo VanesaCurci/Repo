@@ -2,14 +2,14 @@
   <div class="card">
     <h1>Proyectos</h1>
     <a routerLink="/addproye">
-      <i class="fa fa-plus"></i>
+      <i class="fa fa-plus" *ngIf="isAdmin"></i>
     </a>
     <div *ngFor="let proyecto of proyectos">
         <h2>{{proyecto.titulo}}</h2>
         <a routerLink="/editproye/{{proyecto.id}}">
-          <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>  
+          <i class="fa fa-pencil fa-lg" aria-hidden="true" *ngIf="isAdmin"></i>  
         </a>
-         <i class="fa fa-trash-o" aria-hidden="true" (click)="delete(proyecto)"></i>
+         <i class="fa fa-trash-o" aria-hidden="true" *ngIf="isAdmin" (click)="delete(proyecto)"></i>
         <h3>{{proyecto.descripcion}}</h3> 
     </div>
   </div>   

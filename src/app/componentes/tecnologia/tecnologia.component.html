@@ -2,7 +2,7 @@
     <div class="card" >
       <h1>Tecnologías</h1>
       <a routerLink="/addtecno">
-      <i class="fa fa-plus"></i>
+      <i class="fa fa-plus"*ngIf="isAdmin" ></i>
       </a>
         <div class="card-body">
           <ul  *ngFor = "let tecnologia of tecnologias" >
@@ -11,11 +11,11 @@
             </li>
             <li>
               <a routerLink="/edittecno/{{tecnologia.id}}">
-                <i class="fa fa-pencil fa-lg" aria-hidden="true"></i>  
+                <i class="fa fa-pencil fa-lg" aria-hidden="true"*ngIf="isAdmin" ></i>  
               </a>
             </li>
             <li>
-               <i class="fa fa-trash-o" aria-hidden="true" (click)="delete(tecnologia)"></i>
+               <i class="fa fa-trash-o" aria-hidden="true" *ngIf="isAdmin"(click)="delete(tecnologia)"></i>
             </li>
             <li class="card-title">
               {{tecnologia.nombre }}
